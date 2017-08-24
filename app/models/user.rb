@@ -9,4 +9,13 @@ class User < ApplicationRecord
     user.save
     user
   end
+
+  def get_following
+    get_url("https://api.github.com/users/#{current_user.username}/following")
+  end
+
+  def self.get_following(current_user)
+    new(current_user).get_following
+
+  end
 end
