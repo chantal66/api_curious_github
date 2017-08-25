@@ -8,6 +8,7 @@ class User < ApplicationRecord
     user.token     = access_token
     user.save
     user
+
   end
 
   def get_following

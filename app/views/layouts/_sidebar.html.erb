@@ -1,5 +1,6 @@
 <div class="sidebar">
   <% if current_user %>
+      <%	 binding.pry %>
       <%= image_tag current_user.avatar_url, class: "avatar" %>
       <div class="card">
         <h1 class="name"><%= current_user.name %></h1>
