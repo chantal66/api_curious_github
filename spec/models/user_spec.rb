@@ -17,5 +17,6 @@ describe User, type: :model do
     expect(github_user.username).to eq("chantal66")
     expect(github_user.image_url).to eq("https://avatars3.githubusercontent.com/u/15373991?v=4")
     expect(github_user.name).to eq("Chantal Justamond")
+    expect(github_user.email).to eq("cjustamm66@me.com")
   end
 end
