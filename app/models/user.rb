@@ -8,15 +8,14 @@ class User < ApplicationRecord
     user.token     = access_token
     user.save
     user
-
+  binding.pry
   end
 
-  def get_following
-    get_url("https://api.github.com/users/#{current_user.username}/following")
+  def self.get_followers(current_user)
+    GithubService.get_followers(current_user)
   end
 
   def self.get_following(current_user)
-    new(current_user).get_following
-
+    GithubService.get_following(current_user)
   end
 end
