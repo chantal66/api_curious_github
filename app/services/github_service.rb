@@ -9,7 +9,6 @@ class GithubService
       faraday.headers["X-API-KEY"] = ENV["client_id"]
       faraday.adapter Faraday.default_adapter
     end
-    binding.pry
   end
 
   def get_url(url)

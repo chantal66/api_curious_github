@@ -22,3 +22,11 @@
         <p><strong><%= link_to following[:login], following[:html_url] %></strong></p>
   <% end %>
 </div>
+
+<div class="col-md-3">
+  <h3>Followers</h3>
+ <% @followers.each do |follower| %>
+      <%= image_tag(follower[:avatar_url], size: "100x100", class: "img-thumbnail home-image") %>
+      <strong><%= link_to follower[:login], follower[:html_url] %></strong>
+    <% end %>
+</div>
